@@ -2,6 +2,7 @@
   display: table;
   border-bottom: #e6e4e4 1px solid;
   border-left: #e6e4e4 1px solid;
+  font-weight: bold;
 }
 
 .taskListTableRow {
@@ -19,6 +20,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-weight: normal;
 }
 .taskListNameWrapper {
   display: flex;
@@ -35,4 +37,11 @@
   font-size: 0.6rem;
   padding-left: 1rem;
   user-select: none;
+}
+
+.taskName {
+  font-weight: bold;
+}
+.taskName1 {
+  font-weight: normal;
 }

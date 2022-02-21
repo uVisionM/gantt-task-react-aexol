@@ -1,7 +1,6 @@
 import React, { useMemo } from "react";
 import styles from "./task-list-table.module.css";
 import { Task } from "../../types/public-types";
-
 const localeDateStringCache = {};
 const toLocaleDateStringFactory =
   (locale: string) =>
@@ -86,7 +85,13 @@ export const TaskListTableDefault: React.FC<{
                 >
                   {expanderSymbol}
                 </div>
-                <div>{t.name}</div>
+                <div
+                  className={
+                    expanderSymbol ? styles.taskName : styles.taskName1
+                  }
+                >
+                  {t.name}
+                </div>
               </div>
             </div>
             <div
