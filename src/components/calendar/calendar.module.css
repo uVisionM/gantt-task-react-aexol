@@ -15,7 +15,7 @@
 
 .calendarTopText {
   text-anchor: middle;
-  fill: rgba(37, 99, 235, 1);
+  fill: #555;
   font-weight: bold;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
