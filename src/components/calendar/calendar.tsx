@@ -38,16 +38,16 @@ export const Calendar: React.FC<CalendarProps> = ({
     const topDefaultHeight = headerHeight * 0.5;
     for (let i = 0; i < dateSetup.dates.length; i++) {
       const date = dateSetup.dates[i];
-
       const bottomValue = date.getMonth() + 1;
+      const indexKey = getLocaleMonth(date, locale);
       bottomValues.push(
         <text
-          key={bottomValue + date.getFullYear()}
+          key={indexKey + date.getFullYear()}
           y={headerHeight * 0.8}
           x={columnWidth * i + columnWidth * 0.5}
           className={styles.calendarBottomText}
         >
-          {("0" + bottomValue).slice(-2)}
+          {("0" + bottomValue.toString()).slice(-2)}
         </text>
       );
       if (
