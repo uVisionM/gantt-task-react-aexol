@@ -1,8 +1,8 @@
 {
-    "name": "gantt-task-react",
+    "name": "gantt-task-react-aexol",
     "version": "0.3.8",
     "description": "Interactive Gantt Chart for React with TypeScript.",
-    "author": "MaTeMaTuK <maksym.vikarii@gmail.com>",
+    "author": "MaTeMaTuK <maksym.vikarii@gmail.com> Forked by: uVisionM",
     "homepage": "https://github.com/MaTeMaTuK/gantt-task-react",
     "license": "MIT",
     "repository": "MaTeMaTuK/gantt-task-react",
