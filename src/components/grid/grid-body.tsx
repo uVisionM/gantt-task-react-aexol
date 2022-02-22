@@ -87,15 +87,7 @@ export const GridBody: React.FC<GridBodyProps> = ({
           "millisecond"
         ).getTime() >= now.getTime())
     ) {
-      today = (
-        <rect
-          x={tickX}
-          y={0}
-          width={columnWidth}
-          height={y}
-          fill={todayColor}
-        />
-      );
+      today = <rect x={tickX} y={0} width={10} height={y} fill={todayColor} />;
     }
     // rtl for today
     if (
