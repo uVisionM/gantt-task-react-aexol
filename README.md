@@ -3,13 +3,12 @@
 ## Interactive Gantt Chart for React with TypeScript based on gantt-task-react
 
 ![example](https://user-images.githubusercontent.com/26743903/88215863-f35d5f00-cc64-11ea-81db-e829e6e9b5c8.png)
-
 ## [Live Demo](https://matematuk.github.io/gantt-task-react/)
 
 ## Install
 
 ```
-npm install gantt-task-react
+npm install gantt-task-react-aexol
 ```
 
 ## How to use it
