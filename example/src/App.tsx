@@ -11,7 +11,7 @@ const App = () => {
   const [isChecked, setIsChecked] = React.useState(true);
   let columnWidth = 100;
   if (view === ViewMode.Month) {
-    columnWidth = 65;
+    columnWidth = 200;
   } else if (view === ViewMode.Week) {
     columnWidth = 250;
   }
@@ -68,19 +68,6 @@ const App = () => {
         onViewListChange={setIsChecked}
         isChecked={isChecked}
       />
-      <h3>Gantt With Unlimited Height</h3>
-      <Gantt
-        tasks={tasks}
-        viewMode={view}
-        onDateChange={handleTaskChange}
-        onDelete={handleTaskDelete}
-        onProgressChange={handleProgressChange}
-        onDoubleClick={handleDblClick}
-        onSelect={handleSelect}
-        onExpanderClick={handleExpanderClick}
-        listCellWidth={isChecked ? "155px" : ""}
-        columnWidth={columnWidth}
-      />
       <h3>Gantt With Limited Height</h3>
       <Gantt
         tasks={tasks}
@@ -94,6 +81,7 @@ const App = () => {
         listCellWidth={isChecked ? "155px" : ""}
         ganttHeight={300}
         columnWidth={columnWidth}
+        todayColor="#000"
       />
     </div>
   );

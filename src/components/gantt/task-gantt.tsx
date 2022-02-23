@@ -37,9 +37,51 @@ export const TaskGantt: React.FC<TaskGanttProps> = ({
     }
   }, [scrollX]);
 
+  let isDown = false;
+  let startX: number;
+  let scrollLeft: number;
+  const slider = document.querySelector("#containerwithgantt");
+
+  const end = () => {
+    isDown = false;
+    if (slider) slider.classList.remove("active");
+  };
+
+  const start = (event: any) => {
+    isDown = true;
+    if (slider) {
+      slider.classList.add("active");
+      startX = event.pageX || event.touches[0].pageX;
+      scrollLeft = slider.scrollLeft;
+    }
+  };
+
+  const move = (event: any) => {
+    if (!isDown) return;
+    event.preventDefault();
+    if (slider) {
+      const x = event.pageX || event.touches[0].pageX;
+      const dist = x - startX;
+      slider.scrollLeft = scrollLeft - dist;
+    }
+  };
+
+  (() => {
+    slider?.addEventListener("mousedown", start);
+    slider?.addEventListener("touchstart", start);
+
+    slider?.addEventListener("mousemove", move);
+    slider?.addEventListener("touchmove", move);
+
+    slider?.addEventListener("mouseleave", end);
+    slider?.addEventListener("mouseup", end);
+    slider?.addEventListener("touchend", end);
+  })();
+
   return (
     <div
       className={styles.ganttVerticalContainer}
+      id="containerwithgantt"
       ref={verticalGanttContainerRef}
       dir="ltr"
     >
