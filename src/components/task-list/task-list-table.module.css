@@ -6,7 +6,7 @@
 }
 
 .taskListTableRow {
-  display: table-row;
+  display: block;
   text-overflow: ellipsis;
 }
 
@@ -14,12 +14,18 @@
   background-color: #f5f5f5;
 }
 
+.taskDataWrapper {
+  display: flex;
+  padding-inline: 1rem;
+  margin-top: 6px;
+  font-size: inherit;
+  font-size: small;
+  color: #696969;
+}
 .taskListCell {
-  display: table-cell;
+  display: inline-flex;
   vertical-align: middle;
-  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
   font-weight: normal;
 }
 .taskListNameWrapper {

@@ -16,7 +16,7 @@ const toLocaleDateStringFactory =
 const dateTimeOptions: Intl.DateTimeFormatOptions = {
   weekday: "short",
   year: "numeric",
-  month: "long",
+  month: "2-digit",
   day: "numeric",
 };
 
@@ -94,23 +94,27 @@ export const TaskListTableDefault: React.FC<{
                 </div>
               </div>
             </div>
-            <div
-              className={styles.taskListCell}
-              style={{
-                minWidth: rowWidth,
-                maxWidth: rowWidth,
-              }}
-            >
-              &nbsp;{toLocaleDateString(t.start, dateTimeOptions)}
-            </div>
-            <div
-              className={styles.taskListCell}
-              style={{
-                minWidth: rowWidth,
-                maxWidth: rowWidth,
-              }}
-            >
-              &nbsp;{toLocaleDateString(t.end, dateTimeOptions)}
+            <div className={styles.taskDataWrapper}>
+              <div
+                className={styles.taskListCell}
+                style={{
+                  minWidth: "150",
+                  maxWidth: rowWidth,
+                }}
+              >
+                {toLocaleDateString(t.start, dateTimeOptions).slice(5)}
+                {console.log(toLocaleDateString(t.start, dateTimeOptions))}
+              </div>
+              <div
+                className={styles.taskListCell}
+                style={{
+                  minWidth: "150",
+                  maxWidth: "200",
+                }}
+              >
+                &nbsp;-&nbsp;
+                {toLocaleDateString(t.end, dateTimeOptions).slice(5)}
+              </div>
             </div>
           </div>
         );

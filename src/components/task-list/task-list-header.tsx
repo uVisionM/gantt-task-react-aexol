@@ -6,7 +6,7 @@ export const TaskListHeaderDefault: React.FC<{
   rowWidth: string;
   fontFamily: string;
   fontSize: string;
-}> = ({ headerHeight, fontFamily, fontSize, rowWidth }) => {
+}> = ({ headerHeight, fontFamily, fontSize }) => {
   return (
     <div
       className={styles.ganttTable}
@@ -23,9 +23,7 @@ export const TaskListHeaderDefault: React.FC<{
       >
         <div
           className={styles.ganttTable_HeaderItem}
-          style={{
-            minWidth: rowWidth,
-          }}
+          style={{ minWidth: "150", maxWidth: "150" }}
         >
           &nbsp;Name
         </div>
@@ -36,29 +34,6 @@ export const TaskListHeaderDefault: React.FC<{
             marginTop: headerHeight * 0.2,
           }}
         />
-        <div
-          className={styles.ganttTable_HeaderItem}
-          style={{
-            minWidth: rowWidth,
-          }}
-        >
-          &nbsp;From
-        </div>
-        <div
-          className={styles.ganttTable_HeaderSeparator}
-          style={{
-            height: headerHeight * 0.5,
-            marginTop: headerHeight * 0.25,
-          }}
-        />
-        <div
-          className={styles.ganttTable_HeaderItem}
-          style={{
-            minWidth: rowWidth,
-          }}
-        >
-          &nbsp;To
-        </div>
       </div>
     </div>
   );
