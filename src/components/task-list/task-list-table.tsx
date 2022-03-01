@@ -103,7 +103,6 @@ export const TaskListTableDefault: React.FC<{
                 }}
               >
                 {toLocaleDateString(t.start, dateTimeOptions).slice(5)}
-                {console.log(toLocaleDateString(t.start, dateTimeOptions))}
               </div>
               <div
                 className={styles.taskListCell}
